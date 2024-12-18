@@ -23,10 +23,9 @@ const QuestionCard = ({ questions }: Props) => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
-  const router = useRouter();
-
   const handleRefresh = () => {
-    router.push("/");
+    setCurrentQuestionIndex(0);
+    setScore(0);
   };
 
   const handleAnswer = async (selectedAnswer: string) => {
